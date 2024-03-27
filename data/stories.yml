@@ -33,3 +33,10 @@ stories:
   steps:
   - intent: first_aid_advice
   - action: utter_takemedicine
+  
+- story: book path
+  steps:
+  - intent: book_advice
+  - action: utter_book_preferences
+  - intent: genre_answer
+  - action: utter_recomend_book

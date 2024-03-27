@@ -32,6 +32,12 @@ responses:
 
   utter_takemedicine:
   - text: "Take some medicine."
+  
+  utter_book_preferences:
+  - text: "I have some good books in mind, but what genre of books do you like?"
+  
+  utter_recomend_book
+  - text: "You might like The Dark Tower series by Stephen King"
 
 session_config:
   session_expiration_time: 60
