@@ -11,3 +11,8 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Say 'How bad is it?' when user says I am sick
+  steps:
+  - intent: first_aid_advice
+  - action: utter_takemedicine
