@@ -111,7 +111,7 @@ nlu:
 
 - intent: inform_weather
   examples: |
-    - Tell me the weather
-    - Temperature
-    - Weather forecast
-    - Temperature forecast
+    - For [New York](city)
+    - Forecast for [Portland](city)
+    - Temperature in [Detroit](city)
+    - Show me the weather for [Madrid](city)

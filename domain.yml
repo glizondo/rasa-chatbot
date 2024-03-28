@@ -2,6 +2,7 @@ version: "3.1"
 
 entities:
   - symptom
+  - city
 
 
 slots:
@@ -11,6 +12,12 @@ slots:
     mappings:
     - type: from_entity
       entity: symptom
+  city:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: city
 
 
 intents:
@@ -23,9 +30,12 @@ intents:
   - bot_challenge
   - first_aid_advice
   - inform_symptoms
+  - weather_inquire
+  - inform_weather
 
 actions:
   - action_provide_advice
+  - action_provide_weather_forecast
 
 
 responses:
@@ -60,8 +70,6 @@ responses:
   utter_ask_location:
   - text: "I hear you want a weather forecast. For what city?"
 
-  utter_provide_weather_forecast:
-  - text: "Forecast for that city is: "
 
 session_config:
   session_expiration_time: 60
