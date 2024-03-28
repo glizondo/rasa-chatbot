@@ -16,3 +16,8 @@ rules:
   steps:
   - intent: inform_symptoms
   - action: action_provide_advice
+
+- rule: Provide weather forecast
+  steps:
+  - intent: inform_weather
+  - action: action_provide_weather_forecast

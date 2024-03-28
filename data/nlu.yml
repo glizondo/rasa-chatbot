@@ -101,3 +101,17 @@ nlu:
     - I have a [cough](symptom)
     - It's a [fever](symptom)
     - I'm experiencing [headaches](symptom)
+
+- intent: weather_inquire
+  examples: |
+    - Tell me the weather
+    - Temperature
+    - Weather forecast
+    - Temperature forecast
+
+- intent: inform_weather
+  examples: |
+    - Tell me the weather
+    - Temperature
+    - Weather forecast
+    - Temperature forecast

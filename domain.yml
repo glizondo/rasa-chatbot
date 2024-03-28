@@ -57,6 +57,12 @@ responses:
   utter_recommend_doctor:
   - text: "A fever can be a lot of things. Why don't you head out to see your doctor or PA?"
 
+  utter_ask_location:
+  - text: "I hear you want a weather forecast. For what city?"
+
+  utter_provide_weather_forecast:
+  - text: "Forecast for that city is: "
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
