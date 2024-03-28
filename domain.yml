@@ -9,7 +9,9 @@ intents:
   - mood_unhappy
   - bot_challenge
   - first_aid_advice
-
+  - genre_answer
+  - book_advice
+  
 responses:
   utter_greet:
   - text: "Hey! How are you?"
