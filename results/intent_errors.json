@@ -1,0 +1,50 @@
+[
+  {
+    "text": "I am looking for something to read",
+    "intent": "book_advice",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.7728169560432434
+    }
+  },
+  {
+    "text": "Do you know any good books",
+    "intent": "book_advice",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.531882107257843
+    }
+  },
+  {
+    "text": "I have nothing to read",
+    "intent": "book_advice",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.5111581087112427
+    }
+  },
+  {
+    "text": "Fantasy",
+    "intent": "genre_answer",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.4695899188518524
+    }
+  },
+  {
+    "text": "Horror",
+    "intent": "genre_answer",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.8331454396247864
+    }
+  },
+  {
+    "text": "Fiction",
+    "intent": "genre_answer",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.7688272595405579
+    }
+  }
+]
