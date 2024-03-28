@@ -12,7 +12,7 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
-- rule: Say 'How bad is it?' when user says I am sick
+- rule: Advice on symptoms
   steps:
-  - intent: first_aid_advice
-  - action: utter_takemedicine
+  - intent: inform_symptoms
+  - action: action_provide_advice

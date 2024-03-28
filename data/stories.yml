@@ -31,12 +31,11 @@ stories:
 
 - story: sick path
   steps:
+  - intent: greet
+  - action: utter_greet
   - intent: first_aid_advice
-  - action: utter_takemedicine
-  
-- story: book path
-  steps:
-  - intent: book_advice
-  - action: utter_book_preferences
-  - intent: genre_answer
-  - action: utter_recomend_book
+  - action: utter_ask_symptoms
+  - intent: inform_symptoms
+  - action: action_provide_advice
+
+

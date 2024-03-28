@@ -1,5 +1,18 @@
 version: "3.1"
 
+entities:
+  - symptom
+
+
+slots:
+  symptom:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: symptom
+
+
 intents:
   - greet
   - goodbye
@@ -9,6 +22,11 @@ intents:
   - mood_unhappy
   - bot_challenge
   - first_aid_advice
+  - inform_symptoms
+
+actions:
+  - action_provide_advice
+
 
 responses:
   utter_greet:
@@ -30,14 +48,14 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
-  utter_takemedicine:
-  - text: "Take some medicine."
+  utter_ask_symptoms:
+  - text: "I'm sorry to hear that. Can you tell me more about your symptoms?"
+
+  utter_recommend_medicine:
+  - text: "Coughing eh, it might help to take some cough medicine. However, please do not overdo it."
   
-  utter_book_preferences:
-  - text: "I have some good books in mind, but what genre of books do you like?"
-  
-  utter_recomend_book
-  - text: "You might like The Dark Tower series by Stephen King"
+  utter_recommend_doctor:
+  - text: "A fever can be a lot of things. Why don't you head out to see your doctor or PA?"
 
 session_config:
   session_expiration_time: 60
