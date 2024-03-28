@@ -25,4 +25,4 @@ rules:
 - rule: Reccomend book
   steps:
   - intent: genre_answer
-  - action: utter_recomend_book
+  - action: action_recomend_book

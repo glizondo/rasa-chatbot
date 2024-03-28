@@ -1,5 +1,16 @@
 version: "3.1"
 
+entities:
+  - genre
+
+slots:
+  genre:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: genre
+
 intents:
   - greet
   - goodbye
@@ -11,6 +22,9 @@ intents:
   - first_aid_advice
   - genre_answer
   - book_advice
+  
+actions:
+    - action_recomend_book
   
 responses:
   utter_greet:

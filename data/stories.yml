@@ -39,4 +39,4 @@ stories:
   - intent: book_advice
   - action: utter_book_preferences
   - intent: genre_answer
-  - action: utter_recomend_book
+  - action: action_recomend_book

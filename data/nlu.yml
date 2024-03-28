@@ -106,6 +106,5 @@ nlu:
      
 - intent: genre_answer
   examples: |
-     - Fantasy
-     - Horror
-     - Fiction
+     - [Fantasy] (genre)
+     - [Sci-fi] (genre)

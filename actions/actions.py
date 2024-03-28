@@ -25,3 +25,24 @@
 #         dispatcher.utter_message(text="Hello World!")
 #
 #         return []
+
+class ActionRecomendBook(Action):
+
+    def name(self) -> Text:
+        return "action_recomend_book"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        genre = tracker.get_slot('genre')
+
+        if genre == "Fantasy":
+            dispatcher.utter_message(text="You might like The Dark Tower by Stephen King")
+        elif genre == "Sci-fi":
+            dispatcher.utter_message(text="You might like Dune by Frank Herbert")
+        else:
+            dispatcher.utter_message(
+                text="Sorry, I can't think of any books at the moment.")
+
+        return []
