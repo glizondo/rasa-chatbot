@@ -26,6 +26,12 @@
 #
 #         return []
 
+from typing import Any, Text, Dict, List
+
+import requests
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
+
 class ActionRecomendBook(Action):
 
     def name(self) -> Text:
