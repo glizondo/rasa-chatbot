@@ -40,3 +40,10 @@ stories:
   - action: utter_book_preferences
   - intent: genre_answer
   - action: action_recomend_book
+  
+- story: flight path
+  steps:
+  - intent: ask_flight
+  - action: utter_city_airport
+  - intent: book_flight
+  - action: action_book_flight

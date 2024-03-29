@@ -10,6 +10,13 @@ slots:
     mappings:
     - type: from_entity
       entity: genre
+  
+  city:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: city
 
 intents:
   - greet
@@ -22,9 +29,11 @@ intents:
   - first_aid_advice
   - genre_answer
   - book_advice
+  - book_flight
   
 actions:
     - action_recomend_book
+    - action_book_flight
   
 responses:
   utter_greet:
@@ -54,6 +63,9 @@ responses:
   
   utter_recomend_book:
   - text: "You might like The Dark Tower series by Stephen King"
+  
+  utter_city_airport:
+  - text: "What city would you like to fly out of?"
 
 session_config:
   session_expiration_time: 60

@@ -52,3 +52,24 @@ class ActionRecomendBook(Action):
                 text="Sorry, I can't think of any books at the moment.")
 
         return []
+ 
+ class ActionBookFlight(Action):
+
+    def name(self) -> Text:
+        return "action_book_flight"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        city = tracker.get_slot('city')
+
+        if city == "Grand Rapids":
+            dispatcher.utter_message(text="Got it. Booking a flight from GRR Airport.")
+        elif genre == "Sci-fi":
+            dispatcher.utter_message(text="Got it. Booking a flight from O'Hare Airport.")
+        else:
+            dispatcher.utter_message(
+                text="Sorry, I don't have that city and its airports in my database.")
+
+        return []

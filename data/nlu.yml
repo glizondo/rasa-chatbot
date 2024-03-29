@@ -108,3 +108,13 @@ nlu:
   examples: |
      - [Fantasy](genre)
      - [Sci-fi](genre)
+ 
+- intent: ask_flight
+  examples: |
+     - I'd like to travel
+     - I would like to book a flight
+ 
+- intent: book_flight
+  examples: |
+     - [Grand Rapids](city)
+     - [Chicago](city)
