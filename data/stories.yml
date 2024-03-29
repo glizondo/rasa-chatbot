@@ -38,4 +38,13 @@ stories:
   - intent: inform_symptoms
   - action: action_provide_advice
 
+- story: weather forecast
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: weather_inquire
+  - action: utter_ask_location
+  - intent: inform_weather
+  - action: action_provide_weather_forecast
+
 
