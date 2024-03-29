@@ -95,9 +95,27 @@ nlu:
     - I am not feeling well
     - I am feeling unwell
     - I am sick
-    - I have fever
-    - I am coughing, what should I do?
- 
+
+- intent: inform_symptoms
+  examples: |
+    - I have a [cough](symptom)
+    - It's a [fever](symptom)
+    - I'm experiencing [headaches](symptom)
+
+- intent: weather_inquire
+  examples: |
+    - Tell me the weather
+    - Temperature
+    - Weather forecast
+    - Temperature forecast
+
+- intent: inform_weather
+  examples: |
+    - For [New York](city)
+    - Forecast for [Portland](city)
+    - Temperature in [Detroit](city)
+    - Show me the weather for [Madrid](city)
+    
 - intent: book_advice
   examples: |
      - I am looking for something to read

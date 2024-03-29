@@ -1,23 +1,32 @@
 version: "3.1"
 
 entities:
-  - genre
+  - symptom
   - city
+  - genre
+
 
 slots:
-  genre:
+  symptom:
     type: text
     influence_conversation: true
     mappings:
     - type: from_entity
-      entity: genre
-  
+      entity: symptom
   city:
     type: text
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: city
+
+  genre:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: genre
+
 
 intents:
   - greet
@@ -28,15 +37,21 @@ intents:
   - mood_unhappy
   - bot_challenge
   - first_aid_advice
+  - inform_symptoms
+  - weather_inquire
+  - inform_weather
   - genre_answer
   - book_advice
   - book_flight
   - ask_flight
-  
+
 actions:
-    - action_recomend_book
-    - action_book_flight
-  
+  - action_provide_advice
+  - action_provide_weather_forecast
+  - action_recomend_book
+  - action_book_flight
+
+
 responses:
   utter_greet:
   - text: "Hey! How are you?"
@@ -57,9 +72,18 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
-  utter_takemedicine:
-  - text: "Take some medicine."
+  utter_ask_symptoms:
+  - text: "I'm sorry to hear that. Can you tell me more about your symptoms?"
+
+  utter_recommend_medicine:
+  - text: "Coughing eh, it might help to take some cough medicine. However, please do not overdo it."
   
+  utter_recommend_doctor:
+  - text: "A fever can be a lot of things. Why don't you head out to see your doctor or PA?"
+
+  utter_ask_location:
+  - text: "I hear you want a weather forecast. For what city?"
+
   utter_book_preferences:
   - text: "I have some good books in mind, but what genre of books do you like?"
   
@@ -68,6 +92,7 @@ responses:
   
   utter_city_airport:
   - text: "What city would you like to fly out of?"
+
 
 session_config:
   session_expiration_time: 60

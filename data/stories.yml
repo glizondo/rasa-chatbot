@@ -31,8 +31,21 @@ stories:
 
 - story: sick path
   steps:
+  - intent: greet
+  - action: utter_greet
   - intent: first_aid_advice
-  - action: utter_takemedicine
+  - action: utter_ask_symptoms
+  - intent: inform_symptoms
+  - action: action_provide_advice
+
+- story: weather forecast
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: weather_inquire
+  - action: utter_ask_location
+  - intent: inform_weather
+  - action: action_provide_weather_forecast
   
 - story: book path
   steps:
@@ -47,3 +60,5 @@ stories:
   - action: utter_city_airport
   - intent: book_flight
   - action: action_book_flight
+
+
