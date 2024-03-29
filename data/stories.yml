@@ -46,5 +46,19 @@ stories:
   - action: utter_ask_location
   - intent: inform_weather
   - action: action_provide_weather_forecast
+  
+- story: book path
+  steps:
+  - intent: book_advice
+  - action: utter_book_preferences
+  - intent: genre_answer
+  - action: action_recomend_book
+  
+- story: flight path
+  steps:
+  - intent: ask_flight
+  - action: utter_city_airport
+  - intent: book_flight
+  - action: action_book_flight
 
 

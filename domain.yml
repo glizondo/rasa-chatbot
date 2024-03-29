@@ -3,6 +3,7 @@ version: "3.1"
 entities:
   - symptom
   - city
+  - genre
 
 
 slots:
@@ -19,6 +20,13 @@ slots:
     - type: from_entity
       entity: city
 
+  genre:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: genre
+
 
 intents:
   - greet
@@ -32,10 +40,16 @@ intents:
   - inform_symptoms
   - weather_inquire
   - inform_weather
+  - genre_answer
+  - book_advice
+  - book_flight
+  - ask_flight
 
 actions:
   - action_provide_advice
   - action_provide_weather_forecast
+  - action_recomend_book
+  - action_book_flight
 
 
 responses:
@@ -69,6 +83,15 @@ responses:
 
   utter_ask_location:
   - text: "I hear you want a weather forecast. For what city?"
+
+  utter_book_preferences:
+  - text: "I have some good books in mind, but what genre of books do you like?"
+  
+  utter_recomend_book:
+  - text: "You might like The Dark Tower series by Stephen King"
+  
+  utter_city_airport:
+  - text: "What city would you like to fly out of?"
 
 
 session_config:

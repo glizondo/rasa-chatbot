@@ -115,3 +115,24 @@ nlu:
     - Forecast for [Portland](city)
     - Temperature in [Detroit](city)
     - Show me the weather for [Madrid](city)
+    
+- intent: book_advice
+  examples: |
+     - I am looking for something to read
+     - Do you know any good books
+     - I have nothing to read
+     
+- intent: genre_answer
+  examples: |
+     - [Fantasy](genre)
+     - [Sci-fi](genre)
+ 
+- intent: ask_flight
+  examples: |
+     - I'd like to travel
+     - I would like to book a flight
+ 
+- intent: book_flight
+  examples: |
+     - [Grand Rapids](city)
+     - [Chicago](city)

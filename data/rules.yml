@@ -21,3 +21,13 @@ rules:
   steps:
   - intent: inform_weather
   - action: action_provide_weather_forecast
+
+- rule: Ask users about genres
+  steps:
+  - intent: book_advice
+  - action: utter_book_preferences
+  
+- rule: Reccomend book
+  steps:
+  - intent: genre_answer
+  - action: action_recomend_book
