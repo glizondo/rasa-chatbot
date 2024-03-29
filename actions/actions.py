@@ -53,7 +53,7 @@ class ActionRecomendBook(Action):
 
         return []
  
- class ActionBookFlight(Action):
+class ActionBookFlight(Action):
 
     def name(self) -> Text:
         return "action_book_flight"
@@ -66,7 +66,7 @@ class ActionRecomendBook(Action):
 
         if city == "Grand Rapids":
             dispatcher.utter_message(text="Got it. Booking a flight from GRR Airport.")
-        elif genre == "Sci-fi":
+        elif city == "Chicago":
             dispatcher.utter_message(text="Got it. Booking a flight from O'Hare Airport.")
         else:
             dispatcher.utter_message(
