@@ -31,3 +31,23 @@ rules:
   steps:
   - intent: genre_answer
   - action: action_recomend_book
+
+- rule: Ask Clarifying Question
+  steps:
+  - intent: get_tech_support
+  - action: utter_clarifying_question
+
+- rule: Offer help
+  steps:
+  - intent: clarify_issue
+  - action: action_provide_solution
+
+- rule: accept pattern request
+  steps: 
+  - intent: create_pattern
+  - action: utter_awaiting_pattern
+
+- rule: create pattern
+  steps:
+  - intent: pattern
+  - action: action_pattern

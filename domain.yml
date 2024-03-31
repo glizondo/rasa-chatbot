@@ -4,6 +4,8 @@ entities:
   - symptom
   - city
   - genre
+  - issue
+  - pattern
 
 
 slots:
@@ -13,6 +15,7 @@ slots:
     mappings:
     - type: from_entity
       entity: symptom
+
   city:
     type: text
     influence_conversation: true
@@ -26,6 +29,20 @@ slots:
     mappings:
     - type: from_entity
       entity: genre
+  
+  issue:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: issue
+
+  pattern:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: pattern
 
 
 intents:
@@ -44,12 +61,19 @@ intents:
   - book_advice
   - book_flight
   - ask_flight
+  - get_tech_support
+  - clarify_issue
+  - create_pattern
+  - pattern
+
 
 actions:
   - action_provide_advice
   - action_provide_weather_forecast
   - action_recomend_book
   - action_book_flight
+  - action_provide_solution
+  - action_pattern
 
 
 responses:
@@ -93,6 +117,11 @@ responses:
   utter_city_airport:
   - text: "What city would you like to fly out of?"
 
+  utter_clarifying_question:
+  - text: "What seems to be the issue?"
+
+  utter_awaiting_pattern:
+  - text: "Sure! Tell me what pattern you would like me to continue!"
 
 session_config:
   session_expiration_time: 60

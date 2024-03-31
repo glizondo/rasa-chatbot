@@ -120,3 +120,37 @@ class ActionBookFlight(Action):
                 text="Sorry, I don't have that city and its airports in my database.")
 
         return []
+    
+class ActionOfferHelp(Action):
+
+    def name(self) -> Text:
+        return "action_provide_solution"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        issue = tracker.get_slot('issue')
+
+        if issue == "Monitor":
+            dispatcher.utter_message(text="Try unplugging and replugging the monitor cables")
+        else:
+            dispatcher.utter_message(
+                text="Sorry, I don't know how to fix that issue.")
+
+        return []
+    
+class ActionCreatePattern(Action):
+
+    def name(self) -> Text:
+        return "action_pattern"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        pattern = tracker.get_slot('pattern')
+
+        dispatcher.utter_message(text=f"{pattern}{pattern}")
+       
+        return []
