@@ -61,4 +61,16 @@ stories:
   - intent: book_flight
   - action: action_book_flight
 
+- story: tech support
+  steps:
+  - intent: get_tech_support
+  - action: utter_clarifying_question
+  - intent: clarify_issue
+  - action: action_provide_solution
 
+- story: pattern match
+  steps:
+  - intent: create_pattern
+  - action: utter_awaiting_pattern
+  - intent: pattern
+  - action: action_pattern

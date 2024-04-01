@@ -136,3 +136,23 @@ nlu:
   examples: |
      - [Grand Rapids](city)
      - [Chicago](city)
+
+- intent: get_tech_support
+  examples: |
+     - My computer is not working
+     - I need tech suppport
+
+- intent: clarify_issue
+  examples: |
+     - [Monitor](issue)
+
+- intent: create_pattern
+  examples: |
+     - Pattern
+     - I would like to make a pattern
+     - Continue this pattern
+
+- intent: pattern
+  examples: | 
+     - [abcd](pattern)
+     - [101010](pattern)

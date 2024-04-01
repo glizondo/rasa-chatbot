@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-city",
+      "2": "I-city",
+      "3": "L-city",
+      "4": "U-city",
+      "5": "B-genre",
+      "6": "I-genre",
+      "7": "L-genre",
+      "8": "U-genre",
+      "9": "B-issue",
+      "10": "I-issue",
+      "11": "L-issue",
+      "12": "U-issue",
+      "13": "B-symptom",
+      "14": "I-symptom",
+      "15": "L-symptom",
+      "16": "U-symptom",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-city": 1,
+      "I-city": 2,
+      "L-city": 3,
+      "U-city": 4,
+      "B-genre": 5,
+      "I-genre": 6,
+      "L-genre": 7,
+      "U-genre": 8,
+      "B-issue": 9,
+      "I-issue": 10,
+      "L-issue": 11,
+      "U-issue": 12,
+      "B-symptom": 13,
+      "I-symptom": 14,
+      "L-symptom": 15,
+      "U-symptom": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]
