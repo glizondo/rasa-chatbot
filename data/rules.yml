@@ -51,3 +51,13 @@ rules:
   steps:
   - intent: pattern
   - action: action_pattern
+
+- rule: Request Sandwich
+  steps:
+  - intent: request_sandwich
+  - action: utter_response_sandwich
+
+- rule: Make Sandwich
+  steps:
+  - intent: sandwich_maker
+  - action: action_provide_sandwich

@@ -156,3 +156,13 @@ nlu:
   examples: | 
      - [abcd](pattern)
      - [101010](pattern)
+
+- intent: request_sandwich
+  examples: |
+    - Make me a sandwich
+    - I would like a sandwich
+
+- intent: sandwich_maker
+  examples: |
+    - [turkey](sandwich)
+  

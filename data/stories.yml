@@ -74,3 +74,10 @@ stories:
   - action: utter_awaiting_pattern
   - intent: pattern
   - action: action_pattern
+
+- story: sandwich maker
+  steps:
+  - intent: request_sandwich
+  - action: utter_response_sandwich
+  - intent: sandwich_maker
+  - action: action_provide_sandwich

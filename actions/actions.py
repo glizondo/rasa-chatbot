@@ -73,12 +73,14 @@ class ActionProvideWeatherForecast(Action):
             data = response.json()
             temperature = data["main"]["temp"] - 275
             weather = data["weather"][0]["description"]
-            dispatcher.utter_message(text=f"The current temperature in {city} is {temperature:.2f}°C. You can expect {weather}")
+            dispatcher.utter_message(
+                text=f"The current temperature in {city} is {temperature:.2f}°C. You can expect {weather}")
         else:
             dispatcher.utter_message(text=f"Couldn't retrieve the weather for {city}. Please try again.")
 
         return []
-        
+
+
 class ActionRecomendBook(Action):
 
     def name(self) -> Text:
@@ -99,7 +101,8 @@ class ActionRecomendBook(Action):
                 text="Sorry, I can't think of any books at the moment.")
 
         return []
- 
+
+
 class ActionBookFlight(Action):
 
     def name(self) -> Text:
@@ -120,7 +123,8 @@ class ActionBookFlight(Action):
                 text="Sorry, I don't have that city and its airports in my database.")
 
         return []
-    
+
+
 class ActionOfferHelp(Action):
 
     def name(self) -> Text:
@@ -139,7 +143,8 @@ class ActionOfferHelp(Action):
                 text="Sorry, I don't know how to fix that issue.")
 
         return []
-    
+
+
 class ActionCreatePattern(Action):
 
     def name(self) -> Text:
@@ -148,9 +153,28 @@ class ActionCreatePattern(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
         pattern = tracker.get_slot('pattern')
 
         dispatcher.utter_message(text=f"{pattern}{pattern}")
-       
+
+        return []
+
+
+class ActionRequestSandwich(Action):
+
+    def name(self) -> Text:
+        return "action_provide_sandwich"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        sandwich = tracker.get_slot('sandwich')
+
+        if sandwich == "turkey":
+            dispatcher.utter_message(text="A slice of Turkey, cheese, and mayonnaise on white bread")
+        else:
+            dispatcher.utter_message(
+                text="Sorry, I don't know that type of sandwich")
+
         return []

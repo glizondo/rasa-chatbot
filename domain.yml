@@ -6,6 +6,7 @@ entities:
   - genre
   - issue
   - pattern
+  - sandwich
 
 
 slots:
@@ -44,6 +45,12 @@ slots:
     - type: from_entity
       entity: pattern
 
+  sandwich:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: sandwich
 
 intents:
   - greet
@@ -65,6 +72,8 @@ intents:
   - clarify_issue
   - create_pattern
   - pattern
+  - request_sandwich
+  - sandwich_maker
 
 
 actions:
@@ -74,6 +83,7 @@ actions:
   - action_book_flight
   - action_provide_solution
   - action_pattern
+  - action_provide_sandwich
 
 
 responses:
@@ -122,6 +132,9 @@ responses:
 
   utter_awaiting_pattern:
   - text: "Sure! Tell me what pattern you would like me to continue!"
+
+  utter_response_sandwich:
+  - text: "Sure I can make you a sandwich."
 
 session_config:
   session_expiration_time: 60
